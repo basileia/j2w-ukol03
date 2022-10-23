@@ -41,6 +41,19 @@ a {
     justify-content: space-between;
 }
 
+.vizitka--nova {
+    background-color: #FFFFFF66;
+    border: 3px dotted white;
+    justify-content: center;
+    align-items: center;
+}
+
+a:hover .vizitka {
+    box-shadow: 10px 10px 10px black;
+    transform: translate(-5px, -5px);
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
 .jmeno {
     font-weight: bold;
     font-size: 18pt;
@@ -72,10 +85,41 @@ a {
     align-items: center;
 }
 
+.detail nav {
+    margin: 1em;
+    font-size: 150%;
+}
+
+.detail nav a {
+    color: white;
+}
+
 .mapa {
     width: 36em;
     height: 36em;
     border: 1px solid gray;
     margin: 1em;
     box-shadow: 5px 5px 10px black;
+}
+
+.body-formular {
+    display:flex;
+    justify-content:center;
+    min-height:100vh;
+}
+
+.formular {
+    padding: 2em;
+    width: 50%;
+    border: 1px solid gray;
+    background-color: white;
+    margin: 1em;
+    box-shadow: 5px 5px 10px black;
+    justify-content: center;
+}
+
+.button-remove {
+    background-color: transparent;
+    color: red;
+    border: none;
 }

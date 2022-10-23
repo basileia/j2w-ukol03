@@ -2,15 +2,10 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-    <meta charset="UTF-8">
-    <title>Vizitkovník</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="icon" type="image/png" href="/images/favicon.png">
+    [#include "_common/head.ftlh"]
 </head>
 <body>
+
 <div class="detail">
     <div class="vizitka">
         <div class="jmeno">${vizitka.jmeno}</div>
@@ -37,6 +32,14 @@
     <div class="mapa">
         <iframe style="border:none" src="https://frame.mapy.cz/?q=${vizitka.celaAdresa?url}" width="100%" height="100%" frameborder="0"></iframe>
     </div>
+
+    <nav class="navbar">
+        <a href="/">◂ Zpět na seznam</a>
+        <form action="/delete" method="post">
+            <input type="hidden" name="vizitkaId" value="${vizitka.vizitkaId}" />
+            <button type="submit" class="button-remove">Smazat</button>
+        </form>
+    </nav>
 
 </div>
 </body>
