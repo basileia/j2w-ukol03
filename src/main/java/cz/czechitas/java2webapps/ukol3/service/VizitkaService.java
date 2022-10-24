@@ -24,25 +24,18 @@ public class VizitkaService {
     }
 
     public Vizitka vyhledatVizitkuPomociId(int id) {
-        return seznamVizitek.get(id);
+        if (id < seznamVizitek.size()) {
+             return seznamVizitek.get(id);
+        }
+        return null;
     }
 
     public void pridatVizitku(Vizitka vizitka) {
         seznamVizitek.add(vizitka);
     }
 
-    public void smazatPodleVizitkaId(int vizitkaId) {
-        seznamVizitek.remove(vyhledatPomociVizitkaId(vizitkaId));
+    public void smazatPodleId(int id) {
+        seznamVizitek.remove(id);
     }
 
-    private Vizitka vyhledatPomociVizitkaId(int vizitkaId) {
-        for(int i = 0; i < seznamVizitek.size(); i++) {
-            Vizitka vizitka = seznamVizitek.get(i);
-            if (vizitka.getVizitkaId()==vizitkaId)
-            {
-                return vizitka;
-            }
-        }
-        return null;
-    }
 }

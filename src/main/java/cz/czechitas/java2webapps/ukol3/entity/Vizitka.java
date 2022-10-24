@@ -8,13 +8,11 @@ public class Vizitka {
     private String email;
     private String telefon;
     private String web;
-    private int vizitkaId;
-    private static int pocetVizitek=0;
+
     public Vizitka() {
     }
 
     public Vizitka(String jmeno, String firma, String ulice, String obecPsc, String email, String telefon, String web) {
-        pocetVizitek++;
         this.jmeno = jmeno;
         this.firma = firma;
         this.ulice = ulice;
@@ -22,8 +20,6 @@ public class Vizitka {
         this.email = email;
         this.telefon = telefon;
         this.web = web;
-        this.vizitkaId=pocetVizitek;
-
     }
 
     public String getCelaAdresa() {
@@ -86,7 +82,4 @@ public class Vizitka {
         this.web = web;
     }
 
-    public int getVizitkaId() {
-        return vizitkaId;
-    }
 }

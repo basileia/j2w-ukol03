@@ -123,3 +123,8 @@ a:hover .vizitka {
     color: red;
     border: none;
 }
+
+.vizitka-chybejici {
+    font-size: 13pt;
+    text-align: center;
+}

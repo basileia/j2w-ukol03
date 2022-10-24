@@ -7,6 +7,8 @@
 <body>
 
 <div class="detail">
+
+    [#if vizitka?exists]
     <div class="vizitka">
         <div class="jmeno">${vizitka.jmeno}</div>
         <div class="firma">${vizitka.firma}</div>
@@ -36,10 +38,18 @@
     <nav class="navbar">
         <a href="/">◂ Zpět na seznam</a>
         <form action="/delete" method="post">
-            <input type="hidden" name="vizitkaId" value="${vizitka.vizitkaId}" />
+            <input type="hidden" name="id" value="${id}" />
             <button type="submit" class="button-remove">Smazat</button>
         </form>
     </nav>
+    [#else]
+        <div class="vizitka vizitka-chybejici">
+            Požadovaná vizitka neexistuje.
+        </div>
+        <nav>
+        <a href="/">◂ Zpět na seznam</a>
+        </nav>
+    [/#if]
 
 </div>
 </body>

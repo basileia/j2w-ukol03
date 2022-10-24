@@ -13,10 +13,13 @@ import org.springframework.web.servlet.ModelAndView;
 /**
  * Kontroler obsluhující zobrazování vizitek.
  */
+
 @Controller
 @RequestMapping("/")
 public class VizitkaController {
+
   private final VizitkaService service;
+
   public VizitkaController(VizitkaService service) {
     this.service = service;
   }
@@ -48,11 +51,9 @@ public class VizitkaController {
   }
 
   @PostMapping("/delete")
-  public String odebratVizitku(int vizitkaId) {
-    service.smazatPodleVizitkaId(vizitkaId);
+  public String odebratVizitku(int id) {
+    service.smazatPodleId(id);
     return "redirect:/";
   }
-
-
 
 }
